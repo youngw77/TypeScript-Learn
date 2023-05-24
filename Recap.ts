@@ -55,3 +55,35 @@ console.log(dict.def("bob"));
 dict.del("bob");
 // tslint:disable-next-line:no-console
 console.log(dict.def("bob"));
+
+
+type PlayerA = {
+    name:string
+}
+type PlayerAA = PlayerA & {
+    lastName:string
+}
+type PlayerAAA = PlayerAA & {
+    health:number
+}
+const playerA:PlayerAAA = {
+    name:"youngwoo",
+    lastName:"kim",
+    health:3
+}
+
+
+interface PlayerB {
+    name:string
+}
+interface PlayerB {
+    lastName:string
+}
+interface PlayerB {
+    health:number
+}
+const playerB:PlayerB = {
+    name:"youngwoo",
+    lastName:"kim",
+    health:3
+}
